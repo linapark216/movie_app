@@ -1,8 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import Header from './components/Header';
-import Section from './components/Section';
 import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
 import Footer from './components/Footer';
 
 const Wrap = styled.div`
@@ -12,6 +11,8 @@ const Wrap = styled.div`
 		min-width: 100%;
 	}
 `;
+
+const Section = styled.div``;
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
