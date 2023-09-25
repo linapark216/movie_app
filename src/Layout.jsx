@@ -3,16 +3,23 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import imgSection from './components/asset/section_bgi_z0.jpg';
 
 const Wrap = styled.div`
 	position: relative;
+	height: 100vh;
+	color: #fff;
 
 	@media screen and (max-width: 720px) {
 		min-width: 100%;
 	}
 `;
 
-const Section = styled.div``;
+const Section = styled.div`
+	height: 100vh;
+	background-image: url(${imgSection});
+	background-size: cover;
+`;
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
