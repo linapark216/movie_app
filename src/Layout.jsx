@@ -118,6 +118,10 @@ body {
 .blind {
    display: none;
 }
+.sr-only{
+   position: absolute;
+   left: -9999px;
+}
 
 `;
 
