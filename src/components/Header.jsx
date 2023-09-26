@@ -8,7 +8,7 @@ const Container = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
-	height: 74px;
+	height: 80px;
 	margin: 0 auto;
 	background-image: url(${bgimg});
 	background-repeat: no-repeat;
@@ -18,11 +18,12 @@ const Container = styled.div`
 		left: 0;
 		top: 10px;
 		width: 100%;
-		height: 74px;
+		height: 80px;
 		text-indent: -9999px;
 		background-image: url(${logo});
 		background-repeat: no-repeat;
 		background-position: center bottom;
+		background-size: contain;
 	}
 `;
 const Today = styled.p`
