@@ -6,6 +6,8 @@ import styled from 'styled-components';
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	height: 80px;
 	margin-right: 10px;
 
 	> img {
@@ -15,7 +17,7 @@ const Container = styled.div`
 		height: 70px;
 	}
 	> p {
-		margin-top: 10px;
+		margin-top: -5px;
 		color: #fff;
 		text-align: center;
 		> span {

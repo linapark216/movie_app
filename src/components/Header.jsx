@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Weather from './Weather';
-import bgimg from './asset/header_z100.jpg';
-import logo from './asset/header_z200.png';
+import bgimg from './asset/header_z200.png';
+import logo from './asset/logo_z300.png';
 
 const Container = styled.div`
 	display: flex;
@@ -10,25 +10,28 @@ const Container = styled.div`
 	align-items: flex-end;
 	height: 80px;
 	margin: 0 auto;
+	background-color: #445d7f;
 	background-image: url(${bgimg});
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 80px;
 	> h1 {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
 		position: absolute;
-		left: 0;
-		top: 10px;
-		width: 100%;
-		height: 80px;
-		text-indent: -9999px;
+		left: 10px;
+		top: 15px;
+		width: 200px;
+		height: 48px;
+		font-weight: 700;
 		background-image: url(${logo});
 		background-repeat: no-repeat;
-		background-position: center bottom;
-		background-size: contain;
 	}
 `;
 const Today = styled.p`
+	height: 80px;
+	line-height: 80px;
 	margin-right: 20px;
-	padding-bottom: 15px;
 	color: #fff;
 	font-size: 24px;
 	font-weight: 600;
@@ -44,7 +47,7 @@ const Header = () => {
 
 	return (
 		<Container>
-			<h1>LOGO</h1>
+			<h1>MOVIE APP</h1>
 			<Today>{`${year}년 ${month}월${date}일`}</Today>
 			<Weather />
 		</Container>
