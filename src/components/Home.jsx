@@ -1,6 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Movies from './Movies';
+import styled from 'styled-components';
+
+const MovieList = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	padding: 12px;
+	min-width: 800px;
+
+	@media screen and (max-width: 760px) {
+		min-width: 760px;
+	}
+`;
 
 const Home = () => {
 	const [movies, setMovies] = useState([]);
@@ -40,7 +53,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<h1>홈화면</h1>
+			<h1>Team Project 홈화면부분입니다</h1>
 		</div>
 	);
 };
