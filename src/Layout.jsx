@@ -1,16 +1,24 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import Header from './components/Header';
-import Section from './components/Section';
 import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
 import Footer from './components/Footer';
+import imgSection from './components/asset/section_bgi_z0.jpg';
 
 const Wrap = styled.div`
 	position: relative;
+	height: 100vh;
+	color: #fff;
 
 	@media screen and (max-width: 720px) {
 		min-width: 100%;
 	}
+`;
+
+const Section = styled.div`
+	height: 100vh;
+	background-image: url(${imgSection});
+	background-size: cover;
 `;
 
 const GlobalStyle = createGlobalStyle`
