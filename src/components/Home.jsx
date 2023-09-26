@@ -13,7 +13,7 @@ const Home = () => {
 	}
 	const date = '01';
 	const releaseDts = year + month + date;
-	console.log(releaseDts);
+	// console.log(releaseDts);
 
 	const url = `https://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?collection=kmdb_new2&nation=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD&releaseDts=${releaseDts}&detail=Y&ServiceKey=852Y82BA7VQLZ568227M`;
 
