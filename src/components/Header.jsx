@@ -1,23 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 import Weather from './Weather';
+import bgimg from './asset/header_z100.jpg';
+import logo from './asset/header_z200.png';
 
 const Container = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
-	height: 65px;
+	height: 80px;
 	margin: 0 auto;
-	box-sizing: border-box;
+	background-image: url(${bgimg});
+	background-repeat: no-repeat;
+	background-size: cover;
 	> h1 {
 		position: absolute;
-		left: 10px;
-		top: 30%;
+		left: 0;
+		top: 10px;
+		width: 100%;
+		height: 80px;
+		text-indent: -9999px;
+		background-image: url(${logo});
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: contain;
 	}
 `;
 const Today = styled.p`
 	margin-right: 20px;
 	padding-bottom: 15px;
+	color: #fff;
 	font-size: 24px;
 	font-weight: 600;
 `;

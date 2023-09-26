@@ -11,11 +11,12 @@ const Container = styled.div`
 	> img {
 		margin-left: 7px;
 		display: block;
-		width: 70px;
+		width: 60px;
 		height: 70px;
 	}
 	> p {
 		margin-top: 10px;
+		color: #fff;
 		text-align: center;
 		> span {
 			display: block;
