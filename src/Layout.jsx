@@ -16,7 +16,6 @@ const Wrap = styled.div`
 `;
 
 const Section = styled.div`
-	height: 100vh;
 	background-image: url(${imgSection});
 	background-size: cover;
 `;
