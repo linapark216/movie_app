@@ -46,10 +46,11 @@ const Home = () => {
 		getMovies();
 	}, []);
 
-	const posters = movies.map((movie) => {
-		return movie.posters;
-	});
-	console.log(posters);
+	// const posters = movies.map((movie) => {
+	// 	return movie.posters.split('|', 1);
+	// });
+
+	// console.log(posters);
 
 	return (
 		<div>

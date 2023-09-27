@@ -53,7 +53,7 @@ const Movies = ({ movie }) => {
 	return (
 		<Movie>
 			<MoviePoster>
-				<img src={movie.posters} alt="#" />
+				<img src={movie.posters.split('|', 1)} alt="#" />
 			</MoviePoster>
 			<MovieCover />
 			<MovieTitle>{movie.title}</MovieTitle>
