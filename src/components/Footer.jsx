@@ -11,8 +11,13 @@ const Container = styled.div`
 	bottom: 0;
 	width: 100%;
 	height: 150px;
+	min-width: 720px;
 	background-image: url(${imgFooter});
 	background-size: 100% 150px;
+
+	@media screen and (max-width: 720px) {
+		width: 100%;
+	}
 `;
 
 const BottomMenu = styled.div`

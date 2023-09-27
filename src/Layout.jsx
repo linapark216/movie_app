@@ -10,15 +10,21 @@ const Wrap = styled.div`
 	height: 100vh;
 	color: #fff;
 	background-color: #141e28;
+	min-width: 720px;
 
 	@media screen and (max-width: 720px) {
-		min-width: 100%;
+		width: 100%;
 	}
 `;
 
 const Section = styled.div`
+	margin-top: 80px;
 	background-image: url(${imgSection});
 	background-size: cover;
+
+	@media screen and (max-width: 720px) {
+		width: 100%;
+	}
 `;
 
 const GlobalStyle = createGlobalStyle`
