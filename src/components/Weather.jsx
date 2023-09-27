@@ -31,7 +31,7 @@ const Container = styled.div`
 
 		&:nth-of-type(2) {
 			position: absolute;
-			left: 48.3%;
+			left: 39.8%;
 			top: 72%;
 			opacity: 0.2;
 			transform: scaleY(-100%);
