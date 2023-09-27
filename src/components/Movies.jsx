@@ -15,17 +15,23 @@ const MoviePoster = styled.div`
 	border-radius: 16px;
 	background-color: skyblue;
 
-	> img {
-		display: block;
-		width: 210px;
-		height: 300px;
-		border-radius: 16px;
-	}
 	@media screen and (max-width: 760px) {
 		width: 210px;
 		height: 300px;
 		margin: 10px 10px 14px 10px;
 		border-radius: 10px;
+	}
+	> img {
+		display: block;
+		width: 315px;
+		height: 450px;
+		border-radius: 16px;
+
+		@media screen and (max-width: 760px) {
+			width: 210px;
+			height: 300px;
+			border-radius: 10px;
+		}
 	}
 `;
 
