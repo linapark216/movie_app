@@ -10,8 +10,8 @@ const MovieList = styled.div`
 	padding: 12px;
 	min-width: 800px;
 
-	@media screen and (max-width: 760px) {
-		min-width: 760px;
+	@media screen and (max-width: 720px) {
+		width: 100%;
 	}
 `;
 

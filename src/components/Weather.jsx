@@ -5,10 +5,12 @@ import styled from 'styled-components';
 
 const Container = styled.div`
 	display: flex;
-	justify-content: center;
+	position: relative;
+	right: 10px;
+	width: 30%;
+	justify-content: end;
 	align-items: center;
 	height: 80px;
-	margin-right: 10px;
 
 	> img {
 		margin-left: 7px;
@@ -23,8 +25,16 @@ const Container = styled.div`
 		> span {
 			display: block;
 			margin-top: 5px;
-			font-weight: 600;
+			font-weight: 400;
 			font-size: 20px;
+		}
+
+		&:nth-of-type(2) {
+			position: absolute;
+			left: 48.3%;
+			top: 72%;
+			opacity: 0.2;
+			transform: scaleY(-100%);
 		}
 	}
 `;
@@ -63,7 +73,10 @@ const Weather = () => {
 	return (
 		<Container>
 			<p>
-				{location} <span>{temp}</span>
+				{location} <span>{temp}℃</span>
+			</p>
+			<p>
+				{location} <span>{temp}℃</span>
 			</p>
 			<img src={icon} alt="#" />
 		</Container>
