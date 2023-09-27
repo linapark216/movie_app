@@ -15,6 +15,12 @@ const MoviePoster = styled.div`
 	border-radius: 16px;
 	background-color: skyblue;
 
+	> img {
+		display: block;
+		width: 210px;
+		height: 300px;
+		border-radius: 16px;
+	}
 	@media screen and (max-width: 760px) {
 		width: 210px;
 		height: 300px;
@@ -43,12 +49,14 @@ const MovieTitle = styled.figcaption`
 	font-size: 28px;
 `;
 
-const Movies = () => {
+const Movies = ({ movie }) => {
 	return (
 		<Movie>
-			<MoviePoster />
+			<MoviePoster>
+				<img src={movie.posters} alt="#" />
+			</MoviePoster>
 			<MovieCover />
-			<MovieTitle>영화제목</MovieTitle>
+			<MovieTitle>{movie.title}</MovieTitle>
 		</Movie>
 	);
 };

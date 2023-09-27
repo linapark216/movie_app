@@ -46,14 +46,19 @@ const Home = () => {
 		getMovies();
 	}, []);
 
-	const movieList = movies.map((movie) => {
-		return movie.title;
+	const posters = movies.map((movie) => {
+		return movie.posters;
 	});
-	console.log(movieList);
+	console.log(posters);
 
 	return (
 		<div>
 			<h1>Team Project 홈화면부분입니다</h1>
+			<MovieList>
+				{movies.map((movie) => {
+					return <Movies key={movie.movieSeq} movie={movie} />;
+				})}
+			</MovieList>
 		</div>
 	);
 };
