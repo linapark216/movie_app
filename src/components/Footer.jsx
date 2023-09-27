@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import imgFooter from './asset/footer_z100.png';
 import imgBtnLeft from './asset/btn_left_z200.png';
 import imgBtnRight from './asset/btn_right_z200.png';
+import imgShadow from './asset/header_z200.png';
 
 const Container = styled.div`
 	position: fixed;
@@ -11,7 +12,7 @@ const Container = styled.div`
 	width: 100%;
 	height: 150px;
 	background-image: url(${imgFooter});
-	background-size: cover;
+	background-size: 100% 150px;
 `;
 
 const BottomMenu = styled.div`
@@ -33,23 +34,62 @@ const Button = styled.button`
 `;
 
 const BtnLeft = styled(Button)`
+	position: relative;
+	z-index: 310;
 	background-image: url(${imgBtnLeft});
 
 	&:hover {
 		background-position: -59px 0;
 	}
+
+	&:before {
+		display: block;
+		position: absolute;
+		z-index: 310;
+		left: 0px;
+		top: 61px;
+		width: 59px;
+		height: 72px;
+		background-image: url(${imgBtnLeft});
+		opacity: 0.1;
+		content: '';
+	}
+
+	&:hover:before {
+		background-position: -59px 0;
+	}
 `;
 
 const BtnRight = styled(Button)`
+	position: relative;
+	z-index: 310;
 	background-image: url(${imgBtnRight});
 
 	&:hover {
+		background-position: -59px 0;
+	}
+
+	&:before {
+		display: block;
+		position: absolute;
+		z-index: 310;
+		left: 0px;
+		top: 61px;
+		width: 59px;
+		height: 72px;
+		background-image: url(${imgBtnRight});
+		opacity: 0.1;
+		content: '';
+	}
+
+	&:hover:before {
 		background-position: -59px 0;
 	}
 `;
 
 const PrevDay = styled.div`
 	display: flex;
+	position: relative;
 	justify-content: center;
 	align-items: center;
 	width: 120px;
@@ -57,6 +97,14 @@ const PrevDay = styled.div`
 	color: #445d7f;
 	font-weight: 400;
 	font-size: 30px;
+
+	&:nth-of-type(2) {
+		position: absolute;
+		left: 13.3%;
+		top: 40%;
+		opacity: 0.1;
+		transform: scaleY(-100%);
+	}
 `;
 
 const PrevD = styled.p`
@@ -74,6 +122,14 @@ const Day = styled.div`
 	color: #445d7f;
 	font-weight: 400;
 	font-size: 38px;
+
+	&:nth-of-type(4) {
+		position: absolute;
+		left: 37.5%;
+		top: 20%;
+		opacity: 0.1;
+		transform: scaleY(-100%);
+	}
 `;
 
 const D = styled.p`
@@ -91,12 +147,29 @@ const NextDay = styled.div`
 	color: #445d7f;
 	font-weight: 400;
 	font-size: 30px;
+
+	&:nth-of-type(6) {
+		position: absolute;
+		right: 13.3%;
+		top: 40%;
+		opacity: 0.1;
+		transform: scaleY(-100%);
+	}
 `;
 
 const NextD = styled.p`
 	color: #78a7e6;
 	padding-bottom: 14px;
 	font-size: 50px;
+`;
+
+const Shadow = styled.p`
+	position: relative;
+	top: 85px;
+	height: 74px;
+	background-image: url(${imgShadow});
+	background-repeat: no-repeat;
+	background-size: 100% 74px;
 `;
 
 const Footer = () => {
@@ -110,9 +183,6 @@ const Footer = () => {
 	let [today, setToday] = useState(toDay);
 	let [prevday, setPrevday] = useState(prevDay);
 	let [nextday, setNextday] = useState(nextDay);
-	const prevDate = new Date();
-	let test = prevDate.getDate();
-	console.log('어제날짜는 =', test);
 
 	return (
 		<Container>
@@ -130,9 +200,18 @@ const Footer = () => {
 				<PrevDay>
 					<PrevD>{prevday}</PrevD>일
 				</PrevDay>
+				<PrevDay>
+					<PrevD>{prevday}</PrevD>일
+				</PrevDay>
 				<Day>
 					<D>{today}</D>일
 				</Day>
+				<Day>
+					<D>{today}</D>일
+				</Day>
+				<NextDay>
+					<NextD>{nextday}</NextD>일
+				</NextDay>
 				<NextDay>
 					<NextD>{nextday}</NextD>일
 				</NextDay>
@@ -146,6 +225,7 @@ const Footer = () => {
 					}}
 				/>
 			</BottomMenu>
+			<Shadow />
 		</Container>
 	);
 };

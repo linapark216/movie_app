@@ -9,6 +9,7 @@ const Wrap = styled.div`
 	position: relative;
 	height: 100vh;
 	color: #fff;
+	background-color: #141e28;
 
 	@media screen and (max-width: 720px) {
 		min-width: 100%;
